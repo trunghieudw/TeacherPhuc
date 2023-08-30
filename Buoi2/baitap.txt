@@ -1,0 +1,9 @@
+Viết chương trình quản lý thông tin sinh viên và giáo viên.
+Thông tin sinh viên: ID, FirstName, LastName, Address, Sex, Majors
+Thông tin giáo viên: ID, FirstName, LastName, Address, Sex, Degree.
+1. Tạo một danh sách để lưu các sinh viên và giáo viên 
+2. Thêm 3 sinh viên, và 2 giáo viên
+3. Xoá 1 sinh viên
+4. Liệt kê danh sách các sinh viên và giáo viên
+5. Liệt kê danh sách sinh viên
+6. Cập nhật địa chỉ liên hệ của sinh viên
