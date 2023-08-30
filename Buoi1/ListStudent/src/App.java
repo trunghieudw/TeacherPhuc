@@ -1,92 +1,6 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Scanner;
-
-public class App {
-    public static void main(String[] args) {
-        List<Student> studentList = new ArrayList<>();
-        Scanner scanner = new Scanner(System.in);
-        
-        while (true) {
-            System.out.println("\nStudent Management System");
-            System.out.println("1. Add Student");
-            System.out.println("2. Remove Student");
-            System.out.println("3. List All Students");
-            System.out.println("4. List Male Students");
-            System.out.println("5. List Female Students");
-            System.out.println("6. Exit");
-            System.out.print("Enter your choice: ");
-            
-            int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume the newline
-            
-            switch (choice) {
-                case 1:
-                    System.out.print("Enter student name: ");
-                    String name = scanner.nextLine();
-                    System.out.print("Enter student gender (Male/Female): ");
-                    String gender = scanner.nextLine();
-                    studentList.add(new Student(name, gender));
-                    System.out.println("Student added successfully!");
-                    break;
-                    
-                case 2:
-                    System.out.print("Enter student name to remove: ");
-                    String removeName = scanner.nextLine();
-                    Iterator<Student> iterator = studentList.iterator();
-                    while (iterator.hasNext()) {
-                        Student student = iterator.next();
-                        if (student.name.equalsIgnoreCase(removeName)) {
-                            iterator.remove();
-                            System.out.println("Student removed successfully!");
-                            break;
-                        }
-                    }
-                    break;
-                    
-                case 3:
-                    System.out.println("List of all students:");
-                    for (Student student : studentList) {
-                        System.out.println(student);
-                    }
-                    break;
-                    
-                case 4:
-                    System.out.println("List of male students:");
-                    for (Student student : studentList) {
-                        if (student.gender.equalsIgnoreCase("Male")) {
-                            System.out.println(student);
-                        }
-                    }
-                    break;
-                    
-                case 5:
-                    System.out.println("List of female students:");
-                    for (Student student : studentList) {
-                        if (student.gender.equalsIgnoreCase("Female")) {
-                            System.out.println(student);
-                        }
-                    }
-                    break;
-                    
-                case 6:
-                    System.out.println("Exiting the program. Goodbye!");
-                    System.exit(0);
-                    break;
-                    
-                default:
-                    System.out.println("Invalid choice. Please try again.");
-            }
-        }
-    }
-}
-
-
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 abstract class Human {
     protected String id;
@@ -128,7 +42,7 @@ class Student extends Human {
 
 
 
-public class Main {
+public class App {
     public static void main(String[] args) {
         List<Human> people = new ArrayList<>();
 
